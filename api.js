@@ -17,7 +17,7 @@ app.use("/utilisateurs", routerUtilisateurs);
 app.use("/commentaires", routerCommentaires);
 app.use("/parametres", routerParametres);
 
-const urlBDD = "mongodb+srv://ifocopa_dmin:azerty1234@cluster0-v0nsf.mongodb.net/test?retryWrites=true&w=majority";
+const urlBDD = "mongodb+srv://noh25:devam2019noh25@cluster0-plktm.mongodb.net/test?retryWrites=true&w=majority";
 const optionConnexion = {
     useNewUrlParser : true,
     useUnifiedTopology: true
