@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const Joi = require("@hapi/joi");
+const Joi = require("@hapi/joi")
+.extend(require("@hapi/joi-date"));
 
 const schemaCommentaires = mongoose.Schema({
     contenu : String,
@@ -12,8 +13,8 @@ const Commentaires = mongoose.model("commentaires", schemaCommentaires);
 
 const schema = Joi.object({
 
-    contenu : Joi.string().min(20).max(500).required(),
-    dateDeCreation : Joi.date().required(),
+    contenu : Joi.string().min(5).max(500).required(),
+    dateDeCreation : Joi.date().format('DD-MM-YYYY').utc(),
     nomAuteur : Joi.string().min(3).max(255).required(),
     
 });
