@@ -7,7 +7,7 @@ const schemaUtilisateurs = mongoose.Schema({
     email : String,
     password : String,
     role : String,
-    estActif : Boolean
+    est_actif : Boolean
 });
 
 const Utilisateurs = mongoose.model("utilisateurs", schemaUtilisateurs);
@@ -18,7 +18,7 @@ const schema = Joi.object({
     email : Joi.string().email().required(),
     password : Joi.string().alphanum().required(),
     role : Joi.string().required(),
-    estActif : Joi.boolean().required()
+    est_actif : Joi.boolean().required()
 });
 
 module.exports.schema = schema;
