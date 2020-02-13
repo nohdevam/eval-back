@@ -104,7 +104,7 @@ router.put("/:id", async function(req,res){
     resultat.email = body.email;
     resultat.password = body.password;
     resultat.role = body.role;
-    resultat.estPublie = body.estPublie;
+    resultat.est_publie = body.est_publie;
 
     const reponse = await resultat.save();
 

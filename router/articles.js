@@ -75,6 +75,7 @@ router.put("/:id", async function(req,res){
 
     const id = req.params.id ;
     
+    
     const verifID = mongoose.Types.ObjectId.isValid(id);
 
     if(!verifID){
@@ -83,7 +84,6 @@ router.put("/:id", async function(req,res){
     }
 
     const body = req.body ;
-
     const verif = schema.validate(body); 
 
     if(verif.error){
@@ -101,11 +101,11 @@ router.put("/:id", async function(req,res){
 
     resultat.titre = body.titre;
     resultat.contenu = body.contenu;
-    resultat.dateDeCreation = body.dateDeCreation;
-    resultat.nomAuteur = body.nomAuteur;
+    resultat.date_de_creation = body.date_de_creation;
+    resultat.nom_auteur = body.nom_auteur;
     resultat.categories = body.categories;
-    resultat.emailAuteur = body.emailAuteur;
-    resultat.estPublie = body.estPublie;
+    resultat.email_auteur = body.email_auteur;
+    resultat.est_publie = body.est_publie;
 
     const reponse = await resultat.save();
 

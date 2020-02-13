@@ -99,8 +99,8 @@ router.put("/:id", async function(req,res){
     }
 
     resultat.contenu = body.contenu;
-    resultat.dateDeCreation = body.dateDeCreation;
-    resultat.nomAuteur = body.nomAuteur;
+    resultat.date_de_creation = body.date_de_creation;
+    resultat.nom_auteur = body.nom_auteur;
 
 
     const reponse = await resultat.save();
